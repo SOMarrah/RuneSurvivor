@@ -836,8 +836,10 @@ GameObject:
   - component: {fileID: 5858996598661675021}
   - component: {fileID: 8621334383519517060}
   - component: {fileID: 8621334383519517115}
-  - component: {fileID: 8621334384039735614}
   - component: {fileID: 8621334384039735602}
+  - component: {fileID: 2405149600817739294}
+  - component: {fileID: 5445838145495761513}
+  - component: {fileID: 2405149600817739301}
   m_Layer: 0
   m_Name: PlayerChar
   m_TagString: Untagged
@@ -911,31 +913,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 43.89405, y: 72.57119, z: 34.00744}
   m_Center: {x: 0.43539894, y: 36.381016, z: -0.42650297}
---- !u!114 &8621334384039735614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6741395565481918751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561179187a4704522be1e44094a46aa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack:
-    baseValue: 0
-  strength:
-    baseValue: 0
-  defense:
-    baseValue: 3
-  range:
-    baseValue: 0
-  mage:
-    baseValue: 0
-  prayer:
-    baseValue: 0
-  hitpoints: 10
 --- !u!114 &8621334384039735602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,6 +927,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   rotationSpd: 700
+--- !u!114 &2405149600817739294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741395565481918751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9bf2cd7312e40acbbc388ea2dd3606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 28
+  items: []
+--- !u!114 &5445838145495761513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741395565481918751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d313b5390cd44fb18caacd9be567eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2405149600817739301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6741395565481918751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6b206a4798f47c2a3e7171199572aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed:
+    baseValue: 0
+  attackRange:
+    baseValue: 0
+  attackBonus:
+    baseValue: 0
+  strengthBonus:
+    baseValue: 0
+  defenseBonus:
+    baseValue: 1
+  rangeStrength:
+    baseValue: 0
+  mageStrength:
+    baseValue: 0
+  mageDefense:
+    baseValue: 1
+  prayerBonus:
+    baseValue: 0
+  prayerMultiplyer:
+    baseValue: 1
+  attack:
+    baseValue: 0
+  strength:
+    baseValue: 0
+  defense:
+    baseValue: 40
+  range:
+    baseValue: 0
+  mage:
+    baseValue: 0
+  prayer:
+    baseValue: 0
+  hitpoints:
+    baseValue: 100
+  chance: 0
 --- !u!1 &6794338379041366596
 GameObject:
   m_ObjectHideFlags: 0

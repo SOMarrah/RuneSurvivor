@@ -12,11 +12,20 @@ public class Equipment : Item
     public int strengthBonus;
     public int defenseBonus;
     public int rangeStrength;
-    public int mageBonus;
+    public int mageStrength;
     public int mageDefense;
     public int prayerBonus;
     //to do: attack styles
     //undead, slayer, void
+
+    public override void Use()
+    {
+        base.Use();
+        //equip the item
+        EquipmentManager.instance.Equip(this);
+        //remove it from the inventory
+        RemoveFromInventory();
+    }
 
 }
 
