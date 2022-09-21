@@ -9,9 +9,11 @@ public class CharStats : MonoBehaviour
     public Stat strengthBonus;
     public Stat defenseBonus;
     public Stat rangeStrength;
+    public Stat mageAttack;
     public Stat mageStrength;
     public Stat mageDefense;
     public Stat prayerBonus;
+    public Stat attackType;
     
     public Stat prayerMultiplyer;
     public Stat attack;
@@ -22,7 +24,7 @@ public class CharStats : MonoBehaviour
     public Stat prayer;
     public Stat hitpoints;
 
-    public int currentHealth {get; private set; }
+    public float currentHealth {get; private set; }
     public float chance;
     void Awake ()
     {
@@ -32,11 +34,11 @@ public class CharStats : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            TakeDamage(7, "physical", 10);
+            TakeDamage(7,1, 10);
         }
     }
-
-    public void TakeDamage (int attackRoll, string damageType,  int damageRoll)
+    //damageType 1 is phys 2 is mag
+    public void TakeDamage (float attackRoll, int damageType,  float damageRoll)
     {
         //osrs attack roll prayer adjustment +attack style (3 for now) + 8 + void -- later...prayer should default to 1x
         float effectiveLevelPhys = Mathf.Round(defense.GetValue() * prayerMultiplyer.GetValue() + 11);
@@ -46,7 +48,7 @@ public class CharStats : MonoBehaviour
 
         Debug.Log("effectiveLevelPhys: " + effectiveLevelPhys + " equipment bonus phys: " + equipmentBonusPhys);
 
-        if( damageType == "physical")
+        if( damageType == 1 || damageType == 3)
         {
             float physDefRoll = Mathf.Round((effectiveLevelPhys * (equipmentBonusPhys + 64))/640);
             Debug.Log("physDefRoll: " + physDefRoll);
@@ -78,12 +80,12 @@ public class CharStats : MonoBehaviour
             }
 
         }
-        else if (damageType == "magic")
+        else if (damageType == 2)
         {
             float magDefRoll = effectiveLevelMag * (equipmentBonusMag + 64);
             if( attackRoll > magDefRoll)
             {
-               chance = 1-(magDefRoll +2 / (2 * attackRoll + 1));
+               chance = 1-((magDefRoll +2) / (2 * attackRoll + 1));
                if(Random.value < chance)
                {
                 currentHealth -= damageRoll;

@@ -13,8 +13,10 @@ public class Equipment : Item
     public int defenseBonus;
     public int rangeStrength;
     public int mageStrength;
+    public int mageAttack;
     public int mageDefense;
     public int prayerBonus;
+    public int attackType; //1 is phys, 2 is mag
     //to do: attack styles
     //undead, slayer, void
 

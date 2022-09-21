@@ -2496,6 +2496,7 @@ GameObject:
   - component: {fileID: 999404581}
   - component: {fileID: 999404580}
   - component: {fileID: 999404582}
+  - component: {fileID: 999404583}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2619,11 +2620,15 @@ MonoBehaviour:
     baseValue: 0
   rangeStrength:
     baseValue: 0
+  mageAttack:
+    baseValue: 0
   mageStrength:
     baseValue: 0
   mageDefense:
     baseValue: 0
   prayerBonus:
+    baseValue: 0
+  attackType:
     baseValue: 0
   prayerMultiplyer:
     baseValue: 0
@@ -2642,6 +2647,18 @@ MonoBehaviour:
   hitpoints:
     baseValue: 0
   chance: 0
+--- !u!114 &999404583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999404573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd01da338488440dd89c174a45747eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1034070613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4849,6 +4866,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6252666579335633829, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
   m_PrefabInstance: {fileID: 8621334383261396408}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2405149600817739302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385782133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd01da338488440dd89c174a45747eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8621334383261396408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4856,6 +4885,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: mage.baseValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: attack.baseValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: prayer.baseValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: strength.baseValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6252666579335633829, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
       propertyPath: m_RootOrder
       value: 3

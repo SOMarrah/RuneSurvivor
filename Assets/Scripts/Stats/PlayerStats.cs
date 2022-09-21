@@ -21,8 +21,10 @@ public class PlayerStats : CharStats
             defenseBonus.AddModifier(newItem.defenseBonus);
             rangeStrength.AddModifier(newItem.rangeStrength);
             mageStrength.AddModifier(newItem.mageStrength);
+            mageAttack.AddModifier(newItem.mageAttack);
             mageDefense.AddModifier(newItem.mageDefense);
             prayerBonus.AddModifier(newItem.prayerBonus);
+            attackType.AddModifier(newItem.attackType);
 
         }
 
@@ -35,8 +37,10 @@ public class PlayerStats : CharStats
             defenseBonus.RemoveModifier(oldItem.defenseBonus);
             rangeStrength.RemoveModifier(oldItem.rangeStrength);
             mageStrength.RemoveModifier(oldItem.mageStrength);
+            mageAttack.RemoveModifier(oldItem.mageAttack);
             mageDefense.RemoveModifier(oldItem.mageDefense);
             prayerBonus.RemoveModifier(oldItem.prayerBonus);
+            attackType.RemoveModifier(oldItem.attackType);
         }
         
     }

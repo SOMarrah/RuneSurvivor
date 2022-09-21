@@ -15,12 +15,14 @@ MonoBehaviour:
   name: DragonScimitar
   icon: {fileID: 21300000, guid: 89b504927e5c748ff849ef060f50e21a, type: 3}
   equipSlot: 4
-  attackSpeed: 4
+  attackSpeed: 1
   attackRange: 1
   attackBonus: 67
   strengthBonus: 66
   defenseBonus: 1
   rangeStrength: 0
-  mageBonus: 0
+  mageStrength: 0
+  mageAttack: 0
   mageDefense: 0
   prayerBonus: 0
+  attackType: 1
