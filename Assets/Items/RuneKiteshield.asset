@@ -19,8 +19,8 @@ MonoBehaviour:
   attackRange: 0
   attackBonus: 0
   strengthBonus: 0
-  defenseBonus: 0
+  defenseBonus: 48
   rangeStrength: 0
-  mageBonus: 0
+  mageStrength: 0
   mageDefense: 0
   prayerBonus: 0
