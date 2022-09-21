@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4976908d28b3448492e63552e5f2d2b, type: 3}
+  m_Name: RuneScimitar
+  m_EditorClassIdentifier: 
+  name: RuneScimitar
+  icon: {fileID: 21300000, guid: f582deea98128466388d83591c814bf5, type: 3}
+  equipSlot: 4
+  attackSpeed: 4
+  attackRange: 1
+  attackBonus: 67
+  strengthBonus: 66
+  defenseBonus: 1
+  rangeStrength: 0
+  mageBonus: 0
+  mageDefense: 0
+  prayerBonus: 0

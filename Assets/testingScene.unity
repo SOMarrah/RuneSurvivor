@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 249025481}
   - component: {fileID: 249025480}
   m_Layer: 0
-  m_Name: DragonScimitar (1)
+  m_Name: RuneKiteshield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014b2ce237d9b454b93b491a7b0efbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: fea980c244d194293bfe691e803423f0, type: 2}
+  item: {fileID: 11400000, guid: 748e485872eb54cd3ab6dab18281bf0b, type: 2}
 --- !u!135 &249025481
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014b2ce237d9b454b93b491a7b0efbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: fea980c244d194293bfe691e803423f0, type: 2}
+  item: {fileID: 11400000, guid: cfed56b96aa344ed18b9944a836e8a2f, type: 2}
 --- !u!135 &338327861
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014b2ce237d9b454b93b491a7b0efbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: fea980c244d194293bfe691e803423f0, type: 2}
+  item: {fileID: 11400000, guid: cfed56b96aa344ed18b9944a836e8a2f, type: 2}
 --- !u!135 &489472150
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2071,7 +2071,7 @@ GameObject:
   - component: {fileID: 954999029}
   - component: {fileID: 954999028}
   m_Layer: 0
-  m_Name: DragonScimitar (3)
+  m_Name: RuneScimitar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2566,11 +2566,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 605ddcc11769c4ab69a25ba02f3c7b21, type: 3}
---- !u!1 &1119547018 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6741395565481918751, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
-  m_PrefabInstance: {fileID: 8621334383261396408}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129724348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,7 +3416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014b2ce237d9b454b93b491a7b0efbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: fea980c244d194293bfe691e803423f0, type: 2}
+  item: {fileID: 11400000, guid: cfed56b96aa344ed18b9944a836e8a2f, type: 2}
 --- !u!135 &1578081169
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4529,20 +4524,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6252666579335633829, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
   m_PrefabInstance: {fileID: 8621334383261396408}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2405149600817739294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119547018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9bf2cd7312e40acbbc388ea2dd3606, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space: 28
-  items: []
 --- !u!1001 &8621334383261396408
 PrefabInstance:
   m_ObjectHideFlags: 0

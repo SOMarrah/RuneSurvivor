@@ -18,6 +18,15 @@ public class Equipment : Item
     //to do: attack styles
     //undead, slayer, void
 
+    public override void Use()
+    {
+        base.Use();
+        //equip the item
+        EquipmentManager.instance.Equip(this);
+        //remove it from the inventory
+
+    }
+
 }
 
 public enum EquipmentSlot { Head, Cape, Amulet, Ammunition, Weapon, Chest, Shield, Legs, Gloves, Boots, Ring}
