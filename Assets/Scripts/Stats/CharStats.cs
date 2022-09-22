@@ -32,12 +32,8 @@ public class CharStats : MonoBehaviour
     }
     void Update ()
     {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(7,1, 10);
-        }
+
     }
-    //damageType 1 is phys 2 is mag
     public void TakeDamage (float attackRoll, int damageType,  float damageRoll)
     {
         //osrs attack roll prayer adjustment +attack style (3 for now) + 8 + void -- later...prayer should default to 1x
@@ -46,13 +42,9 @@ public class CharStats : MonoBehaviour
         float equipmentBonusPhys = Mathf.Round(defenseBonus.GetValue());
         float equipmentBonusMag = Mathf.Round(mageDefense.GetValue());
 
-        Debug.Log("effectiveLevelPhys: " + effectiveLevelPhys + " equipment bonus phys: " + equipmentBonusPhys);
-
         if( damageType == 1 || damageType == 3)
         {
             float physDefRoll = Mathf.Round((effectiveLevelPhys * (equipmentBonusPhys + 64))/640);
-            Debug.Log("physDefRoll: " + physDefRoll);
-            Debug.Log("Attack roll: " + attackRoll);
             if( attackRoll > physDefRoll)
             {
                 chance = 1 - ((physDefRoll +2) / (2 * (attackRoll + 1)));
@@ -68,7 +60,7 @@ public class CharStats : MonoBehaviour
             else if( attackRoll <= physDefRoll)
             {
                 chance = 1-(attackRoll/(2*physDefRoll));
-                Debug.Log("chance attack is less than def: " + chance);
+
                 if(Random.value > chance)
                 {
                     currentHealth -= Mathf.Clamp(damageRoll, 0, int.MaxValue);

@@ -22,12 +22,20 @@ public class CharacterCombat : MonoBehaviour
         float effectiveLevelPhysAtk = Mathf.Round(myStats.attack.GetValue() * myStats.prayerMultiplyer.GetValue() + 11);
         float effectiveLevelMagAtk = Mathf.Round(myStats.mage.GetValue() * myStats.prayerMultiplyer.GetValue() + 11);
         float effectiveLevelRangAtk = Mathf.Round(myStats.range.GetValue() * myStats.prayerMultiplyer.GetValue() + 11);
+        float effectiveLevelStr = Mathf.Round(myStats.strength.GetValue() * myStats.prayerMultiplyer.GetValue() + 11);
+
         float equipmentBonusPhysAtk = Mathf.Round(myStats.attackBonus.GetValue());
         float equipmentBonusMagAtk = Mathf.Round(myStats.mageAttack.GetValue());
         float equipmentBonusRangAtk = Mathf.Round(myStats.mageDefense.GetValue());
-        float maxHitPhysStr = Mathf.Round(myStats.mageDefense.GetValue());
-        float maxHitRangStr = Mathf.Round(myStats.mageDefense.GetValue());
-        float maxHitMagStr = Mathf.Round(myStats.mageDefense.GetValue());
+
+        float equipmentBonusPhysStr = Mathf.Round(myStats.strengthBonus.GetValue());
+        float equipmentBonusMagStr = Mathf.Round(myStats.mageStrength.GetValue());
+        float equipmentBonusRangStr = Mathf.Round(myStats.rangeStrength.GetValue());
+
+        float maxHitPhysStr = Mathf.Round(((float)0.5 + effectiveLevelStr) * ((equipmentBonusPhysStr +64)/640));
+        float maxHitRangStr = Mathf.Round(((float)1.3 + (effectiveLevelRangAtk/10)) * ((equipmentBonusRangStr)/80) + ((effectiveLevelRangAtk * equipmentBonusRangStr)/640));
+        float maxHitMagStr =  Mathf.Round(((float)0.5 + effectiveLevelMagAtk) * ((equipmentBonusMagStr +64)/640)); //magic max hit is actually based on the table of spells used - each spell has a base max hit. this is a substitute as it just uses the melee version. (magic might be a lot stronger than intended)
+
         float physAtkRoll = Mathf.Round((effectiveLevelPhysAtk * (equipmentBonusPhysAtk + 64))/640);
         float rangAtkRoll = Mathf.Round((effectiveLevelRangAtk * (equipmentBonusRangAtk + 64))/640);
         float magAtkRoll = Mathf.Round((effectiveLevelMagAtk * (equipmentBonusMagAtk + 64))/640);
@@ -38,7 +46,7 @@ public class CharacterCombat : MonoBehaviour
             if (myStats.attackType.GetValue() == 1)
             {
                 //pass in physical attributes
-                actualHit = Random.value * maxHitPhysStr;
+                actualHit = Mathf.Round(Random.value * maxHitPhysStr);
                 targetStats.TakeDamage(physAtkRoll, myStats.attackType.GetValue(), actualHit);
                 attackCooldown = 1f / myStats.attackSpeed.GetValue();
             }

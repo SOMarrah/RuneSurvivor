@@ -2582,7 +2582,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.05
+  m_Radius: 2.78
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &999404581
 MonoBehaviour:
@@ -2609,43 +2609,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed:
-    baseValue: 0
+    baseValue: 1
   attackRange:
-    baseValue: 0
+    baseValue: 1
   attackBonus:
-    baseValue: 0
+    baseValue: 1
   strengthBonus:
-    baseValue: 0
+    baseValue: 1
   defenseBonus:
-    baseValue: 0
+    baseValue: 1
   rangeStrength:
-    baseValue: 0
+    baseValue: 1
   mageAttack:
-    baseValue: 0
+    baseValue: 1
   mageStrength:
-    baseValue: 0
+    baseValue: 1
   mageDefense:
-    baseValue: 0
+    baseValue: 1
   prayerBonus:
-    baseValue: 0
+    baseValue: 1
   attackType:
-    baseValue: 0
+    baseValue: 1
   prayerMultiplyer:
-    baseValue: 0
+    baseValue: 1
   attack:
-    baseValue: 0
+    baseValue: 20
   strength:
-    baseValue: 0
+    baseValue: 20
   defense:
-    baseValue: 0
+    baseValue: 1
   range:
-    baseValue: 0
+    baseValue: 1
   mage:
-    baseValue: 0
+    baseValue: 1
   prayer:
-    baseValue: 0
+    baseValue: 1
   hitpoints:
-    baseValue: 0
+    baseValue: 100
   chance: 0
 --- !u!114 &999404583
 MonoBehaviour:
@@ -4887,19 +4887,75 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
       propertyPath: mage.baseValue
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: range.baseValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
       propertyPath: attack.baseValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
       propertyPath: prayer.baseValue
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: defense.baseValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
       propertyPath: strength.baseValue
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: attackType.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: mageAttack.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: attackBonus.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: attackRange.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: attackSpeed.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: mageDefense.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: prayerBonus.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: defenseBonus.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: mageStrength.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: rangeStrength.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: strengthBonus.baseValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405149600817739301, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
+      propertyPath: prayerMultiplyer.baseValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6252666579335633829, guid: d82f5a6870612473798b8f1291400c1e, type: 3}
       propertyPath: m_RootOrder
