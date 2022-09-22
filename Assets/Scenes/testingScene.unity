@@ -3393,7 +3393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 163352706}
-  inventoryUI: {fileID: 0}
+  inventoryUI: {fileID: 1211755890}
 --- !u!114 &1240438131
 MonoBehaviour:
   m_ObjectHideFlags: 0
